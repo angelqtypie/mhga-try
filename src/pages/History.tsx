@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const HistoryLogsPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const history = useHistory();
+  
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
@@ -17,6 +18,10 @@ const HistoryLogsPage: React.FC = () => {
     { id: 3, user: 'Admin', action: 'Approved new user', date: '2025-07-18 11:40AM' },
     { id: 4, user: 'BHW Jean', action: 'Added health education session', date: '2025-07-18 10:15AM' }
   ];
+
+    const handleLogout = () => {
+    history.push("/mhga-try/"); 
+  };
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', minHeight: '100vh', background: '#f1f5f9' }}>
@@ -43,16 +48,20 @@ const HistoryLogsPage: React.FC = () => {
             <>
               <h1 style={{ fontSize: '20px', fontWeight: 'bold' }}>BHW Center Admin</h1>
               <nav style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <Link to="/bhwadmindashboard" style={linkStyle}>🏠 Dashboard</Link>
-                <Link to="/motherprofilepage" style={linkStyle}>👩 Mother Profiles</Link>
-                <Link to="/activity-logs" style={linkStyle}>📋 BHW Activity Logs</Link>
-                <Link to="/schedules" style={linkStyle}>🕒 Center Schedules</Link>
-                <Link to="/reports" style={linkStyle}>📈 Reports & Statistics</Link>
-                <Link to="/verifications" style={linkStyle}>📝 Verifications</Link>
-                <Link to="/history" style={linkStyle}>📜 History & Logs</Link>
-                <Link to="/settings" style={linkStyle}>⚙️ Admin Settings</Link>
+                <Link to="/mhga-try/bhwadmindashboard" style={linkStyle}>🏠 Dashboard</Link>
+                <Link to="/mhga-try/motherprofilepage" style={linkStyle}>👩 Mother Profiles</Link>
+                <Link to="/mhga-try/activity-logs" style={linkStyle}>📋 BHW Activity Logs</Link>
+                <Link to="/mhga-try/schedules" style={linkStyle}>🕒 Center Schedules</Link>
+                <Link to="/mhga-try/reports" style={linkStyle}>📈 Reports & Statistics</Link>
+                <Link to="/mhga-try/verifications" style={linkStyle}>📝 Verifications</Link>
+                <Link to="/mhga-try/history" style={linkStyle}>📜 History & Logs</Link>
+                <Link to="/mhga-try/settings" style={linkStyle}>⚙️ Admin Settings</Link>
               </nav>
-              <div style={{ marginTop: 'auto', fontSize: '14px' }}>🔌 Log out</div>
+              <div
+                onClick={handleLogout}
+                style={{ marginTop: "auto", fontSize: "14px", cursor: "pointer", paddingTop: "12px" }}>
+                🔌 Log out
+              </div>
             </>
           )}
         </aside>

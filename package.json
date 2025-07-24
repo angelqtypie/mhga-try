@@ -5,8 +5,8 @@
   "type": "module",
   "homepage": "https://angelqtypie.github.io/mhga-try/",
   "scripts": {
-  "predeploy" : "npm run build",
-   "deploy" : "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -15,6 +15,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/interaction": "^6.1.18",
+    "@fullcalendar/react": "^6.1.18",
     "@ionic/react": "^8.5.0",
     "@ionic/react-router": "^8.5.0",
     "@types/react-router": "^5.1.20",

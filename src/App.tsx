@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import BHWAdminDashboard from './pages/BHWAdminDashboard';
 import MotherDashboard from './pages/MotherDashboard';
 import MotherProfilePage from './pages/MotherProfilePage';
-import Activitylogs from './pages/Activitylogs';
+import Activitylogs from './pages/Activity-logs';
 import Schedules from './pages/Schedules';
 import ReportStats from './pages/ReportStats';
 import Verifications from './pages/Verifications';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-const AdminSettingsPage: React.FC = () => {
+const ActivityLogsPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
   const history = useHistory();
@@ -12,13 +12,13 @@ const AdminSettingsPage: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleLogout = () => {
-    history.push("/mhga-try/"); // Redirect to Home using useHistory
+      const handleLogout = () => {
+    history.push("/mhga-try/"); 
   };
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', height: '100vh', overflow: 'hidden' }}>
-      <div style={{ display: 'flex', height: '100vh' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+      <div style={{ display: 'flex', minHeight: '100vh' }}>
         {/* Sidebar */}
         <aside
           style={{
@@ -52,7 +52,7 @@ const AdminSettingsPage: React.FC = () => {
               </nav>
               <div
                 onClick={handleLogout}
-                style={{ marginTop: 'auto', fontSize: '14px', cursor: 'pointer', paddingTop: '12px' }}>
+                style={{ marginTop: "auto", fontSize: "14px", cursor: "pointer", paddingTop: "12px" }}>
                 🔌 Log out
               </div>
             </>
@@ -67,49 +67,30 @@ const AdminSettingsPage: React.FC = () => {
         )}
 
         {/* Main Panel */}
-        <main style={{ flex: 1, background: '#f1f5f9', overflowY: 'auto', padding: '24px', maxHeight: '100vh' }}>
+        <main style={{ flex: 1, background: '#f1f5f9', overflowY: 'auto', padding: '24px' }}>
           <div style={{ backgroundColor: '#fff', padding: '24px', borderRadius: '10px', boxShadow: '0 1px 6px rgba(0,0,0,0.05)' }}>
-            <h2 style={{ fontSize: '22px', marginBottom: '12px' }}>⚙️ Admin Settings</h2>
-            <p style={{ marginBottom: '16px' }}>Customize preferences, permissions, and system-level configurations for administrators and users.</p>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              <div style={settingBox}>
-                <h4>🔔 Notification Preferences</h4>
-                <p>Enable or disable system alerts and notification emails.</p>
-              </div>
-
-              <div style={settingBox}>
-                <h4>🔑 Password Management</h4>
-                <p>Allow admins to reset credentials and set password rules for users.</p>
-              </div>
-
-              <div style={settingBox}>
-                <h4>👥 Roles & Permissions</h4>
-                <p>Manage user access levels like Admin, BHW, or Registered Mother.</p>
-              </div>
-
-              <div style={settingBox}>
-                <h4>🗄️ Data Retention & Backup</h4>
-                <p>Configure retention rules, automated backups, and recovery policies.</p>
-              </div>
-
-              <div style={settingBox}>
-                <h4>🔒 Security & Login</h4>
-                <p>Set up two-factor authentication (2FA), session timeouts, and failed login alerts.</p>
-              </div>
-            </div>
+            <h2 style={{ fontSize: '22px', marginBottom: '12px' }}>📋 BHW Activity Logs</h2>
+            <p style={{ marginBottom: '16px' }}>
+              This page will show logs or records of BHW activities including:
+            </p>
+            <ul style={{ marginBottom: '16px', paddingLeft: '20px', lineHeight: '1.6' }}>
+              <li>🩺 Consultations</li>
+              <li>🏠 Home Visits</li>
+              <li>📚 Health Education Sessions</li>
+              <li>🚨 Response Actions to Reported Risks</li>
+            </ul>
+            <p style={{ marginBottom: '12px' }}>
+              🔍 <b>Filtering Options:</b>
+            </p>
+            <ul style={{ paddingLeft: '20px', lineHeight: '1.6' }}>
+              <li>📅 Filter by Date</li>
+              <li>📌 Filter by Type of Activity</li>
+            </ul>
           </div>
         </main>
       </div>
     </div>
   );
-};
-
-const settingBox: React.CSSProperties = {
-  background: '#e0f2fe',
-  padding: '16px',
-  borderRadius: '10px',
-  boxShadow: '0 1px 6px rgba(0,0,0,0.1)'
 };
 
 const linkStyle: React.CSSProperties = {
@@ -131,4 +112,4 @@ const menuButtonStyle: React.CSSProperties = {
   zIndex: 30
 };
 
-export default AdminSettingsPage;
+export default ActivityLogsPage;
