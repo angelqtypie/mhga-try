@@ -10,6 +10,7 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  base:"mhga-try",
   test: {
     globals: true,
     environment: 'jsdom',

@@ -48,38 +48,38 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
+        <Route exact path="/mhga-try/home">
           <Home />
         </Route>
-         <Route exact path="/bhwadmindashboard">
+         <Route exact path="/mhga-try/bhwadmindashboard">
           <BHWAdminDashboard />
         </Route>  
-        <Route exact path="/motherdashboard">
+        <Route exact path="/mhga-try/motherdashboard">
           <MotherDashboard /> 
         </Route>  
-        <Route exact path="/motherprofilepage">
+        <Route exact path="/mhga-try/motherprofilepage">
           <MotherProfilePage />
         </Route> 
-        <Route exact path="/activity-logs">
+        <Route exact path="/mhga-try/activity-logs">
           <Activitylogs />
         </Route> 
-        <Route exact path="/schedules">
+        <Route exact path="/mhga-try/schedules">
           <Schedules />
         </Route>  
-        <Route exact path="/reports">
+        <Route exact path="/mhga-try/reports">
           <ReportStats />
         </Route> 
-        <Route exact path="/verifications">
+        <Route exact path="/mhga-try/verifications">
           <Verifications />
         </Route>      
-        <Route exact path="/history">
+        <Route exact path="/mhga-try/history">
           <History />
         </Route>  
-        <Route exact path="/settings">
+        <Route exact path="/mhga-try/settings">
           <Settings />
         </Route>             
-        <Route exact path="/">
-          <Redirect to="/home" />
+        <Route exact path="/mhga-try/">
+          <Redirect to="/mhga-try/home" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

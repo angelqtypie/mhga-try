@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         </p>
 
         <button
-          onClick={() => history.push("/bhwadmindashboard")}
+          onClick={() => history.push("/mhga-try/bhwadmindashboard")}
           style={{
             width: '100%',
             padding: '12px',
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
         </button>
 
         <button
-          onClick={() => history.push("/motherdashboard")}
+          onClick={() => history.push("/mhga-try/motherdashboard")}
           style={{
             width: '100%',
             padding: '12px',

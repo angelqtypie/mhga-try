@@ -46,7 +46,7 @@ const ReportsStatisticsPage: React.FC = () => {
   const COLORS = ['#10b981', '#facc15', '#ef4444'];
    
   const handleLogout = () => {
-    history.push("/"); 
+    history.push("/mhga-try/"); 
   };
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', height: '100vh', overflow: 'hidden' }}>
@@ -73,14 +73,14 @@ const ReportsStatisticsPage: React.FC = () => {
             <>
               <h1 style={{ fontSize: '20px', fontWeight: 'bold' }}>BHW Center Admin</h1>
               <nav style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <Link to="/bhwadmindashboard" style={linkStyle}>🏠 Dashboard</Link>
-                <Link to="/motherprofilepage" style={linkStyle}>👩 Mother Profiles</Link>
-                <Link to="/activity-logs" style={linkStyle}>📋 BHW Activity Logs</Link>
-                <Link to="/schedules" style={linkStyle}>🕒 Center Schedules</Link>
-                <Link to="/reports" style={linkStyle}>📈 Reports & Statistics</Link>
-                <Link to="/verifications" style={linkStyle}>📝 Verifications</Link>
-                <Link to="/history" style={linkStyle}>📜 History & Logs</Link>
-                <Link to="/settings" style={linkStyle}>⚙️ Admin Settings</Link>
+                <Link to="/mhga-try/bhwadmindashboard" style={linkStyle}>🏠 Dashboard</Link>
+                <Link to="/mhga-try/motherprofilepage" style={linkStyle}>👩 Mother Profiles</Link>
+                <Link to="/mhga-try/activity-logs" style={linkStyle}>📋 BHW Activity Logs</Link>
+                <Link to="/mhga-try/schedules" style={linkStyle}>🕒 Center Schedules</Link>
+                <Link to="/mhga-try/reports" style={linkStyle}>📈 Reports & Statistics</Link>
+                <Link to="/mhga-try/verifications" style={linkStyle}>📝 Verifications</Link>
+                <Link to="/mhga-try/history" style={linkStyle}>📜 History & Logs</Link>
+                <Link to="/mhga-try/settings" style={linkStyle}>⚙️ Admin Settings</Link>
               </nav>
               <div
                 onClick={handleLogout}

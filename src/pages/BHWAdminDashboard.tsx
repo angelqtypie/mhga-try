@@ -13,7 +13,7 @@ const BHWAdminDashboard: React.FC = () => {
   }, []);
   
         const handleLogout = () => {
-    history.push("/"); 
+    history.push("/mhga-try/"); 
   };
 
   return (
@@ -41,14 +41,14 @@ const BHWAdminDashboard: React.FC = () => {
             <>
               <h1 style={{ fontSize: '20px', fontWeight: 'bold' }}>BHW Center Admin</h1>
               <nav style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <Link to="/bhwadmindashboard" style={linkStyle}>🏠 Dashboard</Link>
-                <Link to="/motherprofilepage" style={linkStyle}>👩 Mother Profiles</Link>
-                <Link to="/activity-logs" style={linkStyle}>📋 BHW Activity Logs</Link>
-                <Link to="/schedules" style={linkStyle}>🕒 Center Schedules</Link>
-                <Link to="/reports" style={linkStyle}>📈 Reports & Statistics</Link>
-                <Link to="/verifications" style={linkStyle}>📝 Verifications</Link>
-                <Link to="/history" style={linkStyle}>📜 History & Logs</Link>
-                <Link to="/settings" style={linkStyle}>⚙️ Admin Settings</Link>
+                <Link to="/mhga-try/bhwadmindashboard" style={linkStyle}>🏠 Dashboard</Link>
+                <Link to="/mhga-try/motherprofilepage" style={linkStyle}>👩 Mother Profiles</Link>
+                <Link to="/mhga-try/activity-logs" style={linkStyle}>📋 BHW Activity Logs</Link>
+                <Link to="/mhga-try/schedules" style={linkStyle}>🕒 Center Schedules</Link>
+                <Link to="/mhga-try/reports" style={linkStyle}>📈 Reports & Statistics</Link>
+                <Link to="/mhga-try/verifications" style={linkStyle}>📝 Verifications</Link>
+                <Link to="/mhga-try/history" style={linkStyle}>📜 History & Logs</Link>
+                <Link to="/mhga-try/settings" style={linkStyle}>⚙️ Admin Settings</Link>
               </nav>
               <div
                 onClick={handleLogout}
@@ -69,25 +69,25 @@ const BHWAdminDashboard: React.FC = () => {
         {/* Main Panel */}
         <main style={{ flex: 1, background: '#f1f5f9', overflowY: 'auto', padding: '24px' }}>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <Link to="/motherprofilepage" style={cardLinkStyle}>
+            <Link to="/mhga-try/motherprofilepage" style={cardLinkStyle}>
               <div style={cardStyle}>
-                <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#22c55e' }}>✅ 22</div>
+                <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#22c55e' }}>✅ 2</div>
                 <div>Active Pregnant Mothers</div>
               </div>
             </Link>
-            <Link to="/risk-cases" style={cardLinkStyle}>
+            <Link to="/mhga-try/risk-cases" style={cardLinkStyle}>
               <div style={cardStyle}>
                 <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#f97316' }}>🚨 3</div>
                 <div>High-Risk Cases This Week</div>
               </div>
             </Link>
-            <Link to="/unresponded" style={cardLinkStyle}>
+            <Link to="/mhga-try/unresponded" style={cardLinkStyle}>
               <div style={cardStyle}>
                 <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#e11d48' }}>🕒 5</div>
                 <div>Unresponded Reports over 24 hrs</div>
               </div>
             </Link>
-            <Link to="/verifications" style={cardLinkStyle}>
+            <Link to="/mhga-try/verifications" style={cardLinkStyle}>
               <div style={cardStyle}>
                 <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#3b82f6' }}>👤 2</div>
                 <div>New Unverified Users</div>
