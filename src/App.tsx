@@ -2,15 +2,8 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
-import BHWAdminDashboard from './pages/BHWAdminDashboard';
-import MotherDashboard from './pages/MotherDashboard';
-import MotherProfilePage from './pages/MotherProfilePage';
-import Activitylogs from './pages/Activity-logs';
-import Schedules from './pages/Schedules';
-import ReportStats from './pages/ReportStats';
-import Verifications from './pages/Verifications';
-import History from './pages/History';
-import Settings from './pages/Settings';
+
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -51,33 +44,6 @@ const App: React.FC = () => (
         <Route exact path="/mhga-try/home">
           <Home />
         </Route>
-         <Route exact path="/mhga-try/bhwadmindashboard">
-          <BHWAdminDashboard />
-        </Route>  
-        <Route exact path="/mhga-try/motherdashboard">
-          <MotherDashboard /> 
-        </Route>  
-        <Route exact path="/mhga-try/motherprofilepage">
-          <MotherProfilePage />
-        </Route> 
-        <Route exact path="/mhga-try/activity-logs">
-          <Activitylogs />
-        </Route> 
-        <Route exact path="/mhga-try/schedules">
-          <Schedules />
-        </Route>  
-        <Route exact path="/mhga-try/reports">
-          <ReportStats />
-        </Route> 
-        <Route exact path="/mhga-try/verifications">
-          <Verifications />
-        </Route>      
-        <Route exact path="/mhga-try/history">
-          <History />
-        </Route>  
-        <Route exact path="/mhga-try/settings">
-          <Settings />
-        </Route>             
         <Route exact path="/mhga-try/">
           <Redirect to="/mhga-try/home" />
         </Route>
